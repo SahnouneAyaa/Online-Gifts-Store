@@ -1,0 +1,87 @@
+<%- include ('header.ejs') %>
+
+
+<!-- saving section -->
+
+<section class="saving_section ">
+    <div class="box">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="img-box">
+              <img src="images/saving-img.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>
+                  Best Savings on <br>
+                  new arrivals
+                </h2>
+              </div>
+              <p>
+                Qui ex dolore at repellat, quia neque doloribus omnis adipisci, ipsum eos odio fugit ut eveniet blanditiis praesentium totam non nostrum dignissimos nihil eius facere et eaque. Qui, animi obcaecati.
+              </p>
+              <div class="btn-box">
+                <a href="#" class="btn1">
+                  Buy Now
+                </a>
+                <a href="#" class="btn2">
+                  See More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end saving section -->
+
+  <!-- shop section -->
+
+  <section class="shop_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Latest Products
+        </h2>
+      </div>
+      <div class="row">
+        <% for(let product of products){%> 
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="/product/<%= product._id%> " target="_blank">
+              <div class="img-box">
+                <img src="images/<%=product.img %>" alt="">
+              </div>
+              <div class="detail-box">
+                <h6 style="text-transform: capitalize;">
+                  <%= product.name %> 
+                </h6>
+                <h6>
+                    Price
+                  <span>
+                    $<%= product.price %> 
+                  </span>
+                </h6>
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <% }%> 
+      </div>  
+    </div>    
+  </section>
+
+  <!-- end shop section -->
+
+
+  <%- include ('footer.ejs') %>

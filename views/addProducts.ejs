@@ -1,0 +1,45 @@
+
+
+<%- include ('header.ejs') %>
+
+
+  <div class="container" style="margin-top: 80px;">
+    <h2 class="title">Add Product</h2>
+    <div class="content">
+      <form action="/addProduct" method="post" enctype="multipart/form-data">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Product Name</span>
+            <input type="text" placeholder="Enter the product name" required name="name">
+          </div>
+          <div class="input-box">
+            <span class="details">Price</span>
+            <input type="text" placeholder="Enter the product price" required name="price">
+          </div>
+          <div class="input-box " style="margin-bottom: 0;">
+            <span class="details">Product Image</span>
+          </div>
+        </div>
+        <input type="file" name="image" style="margin-bottom: 20px;">
+
+        <% if (successMessage) { %>
+        <div class="field alert alert-success">
+            <%= successMessage %>
+        </div>
+        <% } %>
+        <% if (failMessage) { %>
+        <div class="field alert alert-danger" >
+            <%= failMessage %>
+        </div>
+        <% } %>
+        <div class="button">
+          <input type="submit" value="Confirm">
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+<%- include ('footer.ejs') %>
+

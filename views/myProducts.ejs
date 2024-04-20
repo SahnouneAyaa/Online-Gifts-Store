@@ -1,0 +1,31 @@
+<%- include ('header.ejs') %>
+
+
+<table class="table" style="margin: 100px 40px;">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"> Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (let product of myproducts) { %>
+    <tr>
+      <th scope="row">1</th>
+      <td><%= product.name%></td>
+      <td><%= product.price%></td>
+      <td><img src="/images/<%= product.img%>" alt="" width="50" height="50"></td>
+      <td>
+        <a href="/myProduct/Delete/<%= product._id%>"><button class="btn btn-danger" style="margin-right:10px ;">Delete</button></a>
+        <a href="/myProduct/update/<%= product._id%>"><button class="btn btn-primary" >Update</button></a>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+
+
+
+<%- include ('footer.ejs') %>

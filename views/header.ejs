@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>
+    Gift store
+  </title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/css/responsive.css" rel="stylesheet" />
+  
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+
+	</head>
+<body>
+    
+
+    <body>
+      <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                Giftos
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""></span>
+            </button>
+    
+            <div class="collapse navbar-collapse innerpage_navbar" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/shop">
+                    Shop
+                  </a>
+                </li>
+                <% if (verif){ %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/addProduct">
+                    Add Products
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/myProduct">
+                    My Products
+                  </a>
+                </li>
+                <% }%>
+                <li class="nav-item">
+                  <a class="nav-link" href="/why">
+                    Why Us
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/testimonial">
+                    Testimonial
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <% if (!verif){ %>
+                <a href="/login">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                    Login
+                  </span>
+                </a>
+                <a href="/register">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                    Register
+                  </span>
+                </a>
+                <%}%>
+                <% if (verif){ %>
+                <form class="form-inline " method="post" action="/logout">
+                  <button class="btn btn-danger" type="submit">
+                    Logout
+                  </button>
+                </form>
+                <% }%>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <!-- end header section -->
+    
+      </div>
