@@ -63,15 +63,15 @@ exports.postUpdate=(req, res, next) =>{
 
     if(req.file){
         productModel.postUpdate(req.body.name,req.body.price,req.file.filename,req.body.productId).then(()=>{
-            res.redirect('/myProducts')
+            res.redirect('/myProduct')
          }).catch((err)=>{
-            res.redirect('/myProducts')
+            res.redirect('/myProduct')
          })
     }else{
         productModel.postUpdate(req.body.name,req.body.price,req.body.oldimg,req.body.productId).then(()=>{
-            res.redirect('/myProducts')
+            res.redirect('/myProduct')
          }).catch((err)=>{
-            res.redirect('/myProducts')
+            res.redirect('/myProduct')
          })
     }
     
